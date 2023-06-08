@@ -11,16 +11,13 @@ public class CoolNumbers {
         List<String> listLetters = generateListLetters();
         List<String> listNumbers = generateListNumbers();
         List<String> listRegions = generateListRegions();
-        for (int i = 0; i < listRegions.size(); i++) {
-            String region = listRegions.get(i);
+        for (String region : listRegions) {
             for (int j = 0; j < listLetters.size(); j++) {
                 String letter3 = listLetters.get(j);
                 for (int k = 0; k < listLetters.size(); k++) {
                     String letter2 = listLetters.get(k);
-                    for (int l = 0; l < listNumbers.size(); l++) {
-                        String number = listNumbers.get(l);
-                        for (int m = 0; m < listLetters.size(); m++) {
-                            String letter1 = listLetters.get(m);
+                    for (String number : listNumbers) {
+                        for (String letter1 : listLetters) {
                             listCoolNumbers.add(letter1 + number + letter2 + letter3 + region);
                         }
                     }
@@ -32,35 +29,19 @@ public class CoolNumbers {
     }
 
     public static boolean bruteForceSearchInList(List<String> list, String number) {
-        boolean contains = false;
-        if (list.contains(number)) {
-            contains = true;
-        }
-        return contains;
+        return list.contains(number);
     }
 
     public static boolean binarySearchInList(List<String> sortedList, String number) {
-        boolean contains = false;
-        if (Collections.binarySearch(sortedList, number) != -1) {
-            contains = true;
-        }
-        return contains;
+        return Collections.binarySearch(sortedList, number) != -1;
     }
 
     public static boolean searchInHashSet(HashSet<String> hashSet, String number) {
-        boolean contains = false;
-        if (hashSet.contains(number)) {
-            contains = true;
-        }
-        return contains;
+        return hashSet.contains(number);
     }
 
     public static boolean searchInTreeSet(TreeSet<String> treeSet, String number) {
-        boolean contains = false;
-        if (treeSet.contains(number)) {
-            contains = true;
-        }
-        return contains;
+        return treeSet.contains(number);
     }
 
     private static List<String> generateListLetters() {

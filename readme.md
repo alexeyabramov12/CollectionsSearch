@@ -1,32 +1,7 @@
-# Работа с проектом в IntelliJ IDEA
+# CollectionsSearch
 
-## Запуск тестов локально
+This code generates over 2 million beautiful Russian license plates and adds to the collection.
 
-Запуск на вашем компьютере перед отправкой в репозиторий
+Next, the program looks for the number "A999AA11" and measures the time for each search.
 
-### Используя интерфейс
-
-- Вызовите контекстное меню папки `test/java`
-правой клавишей мыши.
-- Выберите пункт `Run 'All Tests'`
-
-![Запуск тестов](https://i.imgur.com/30te74l.png)
-
-### Используя горячие клавиши
-
-Запуск всех тестов `Ctrl+Shift+F10` / `⌃⇧R`
-
-*Также вы можете запустить дебаг для анализа и поиска причины*
-
-## Запуск проверки codestyle
-
-- Запустите плагин checkstyle:
-
-### Используя интерфейс
-
-![Запуск проверки стиля кода](https://i.imgur.com/jxgn4In.png)
-
-В результате получите отчет. Если ошибки будут найдены, посмотреть их список и описание
-сможете в разделе
-
-![](https://i.imgur.com/vyl2YnF.png)
+![](src/main/resources/image.png)

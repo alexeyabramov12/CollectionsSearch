@@ -5,12 +5,6 @@ import java.util.List;
 import java.util.TreeSet;
 
 public class Main {
-    /*
-    TODO:
-     - реализовать методы класса CoolNumbers
-     - посчитать время поиска введимого номера в консоль в каждой из структуры данных
-     - проанализоровать полученные данные
-     */
 
     public static void main(String[] args) {
         List<String> list = CoolNumbers.generateCoolNumbers();
@@ -18,20 +12,20 @@ public class Main {
         long time = System.nanoTime();
         CoolNumbers.bruteForceSearchInList(list, number);
         time = System.nanoTime() - time;
-        System.out.println("Поиск перебором занял: " + time + "нс");
+        System.out.println("Direct enumeration over ArrayList: " + time + " nanoseconds");
         time = System.nanoTime();
         CoolNumbers.binarySearchInList(list, number);
         time = System.nanoTime() - time;
-        System.out.println("Бинарный поиск занял: " + time + "нс");
+        System.out.println("Binary search on a sorted ArrayList: " + time + " nanoseconds");
         HashSet<String> hashSet = new HashSet<>(list);
         time = System.nanoTime();
         CoolNumbers.searchInHashSet(hashSet, number);
         time = System.nanoTime() - time;
-        System.out.println("Поиск в HashSet занял: " + time + "нс");
+        System.out.println("Search in HashSet: " + time + " nanoseconds");
         TreeSet<String> treeSet = new TreeSet<>(list);
         time = System.nanoTime();
         CoolNumbers.searchInTreeSet(treeSet, number);
         time = System.nanoTime() - time;
-        System.out.println("Поиск в TreeSet занял: " + time + "нс");
+        System.out.println("Search in TreeSet : " + time + " nanoseconds");
     }
 }
